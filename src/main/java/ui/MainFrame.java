@@ -33,7 +33,7 @@ public class MainFrame extends JFrame {
                 calculate(file);
             }
         });
-        panel.add(maxNumLabel);
+        panel.add(maxNumLabel);//
         panel.add(minNumLabel);
         panel.add(countLabel);
         panel.add(avgLabel);
