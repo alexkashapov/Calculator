@@ -35,10 +35,13 @@ public class Main {
         if (arr.size() % 2 != 0) {
             mediana = arr.get((arr.size() - 2) / 2 + 1);
         } else mediana = (arr.get(arr.size() / 2 - 1) + arr.get(arr.size() / 2)) / 2;
+        final double[] sum = {0};
+        arr.forEach(i-> sum[0] +=i);
         System.out.println("Min: " + min);
         System.out.println("Max: " + max);
         System.out.println("Count: " + arr.size());
         System.out.println("Average: " + average[0]);
         System.out.println("Mediana: " + mediana);
+        System.out.println("Sum:"+sum[0]);
     }
 }
