@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //MainFrame frame = new MainFrame();
-       consoleUI();
+        MainFrame frame = new MainFrame();
+//        consoleUI();
     }
 
     public static void consoleUI(){
@@ -35,15 +35,13 @@ public class Main {
         if (arr.size() % 2 != 0) {
             mediana = arr.get((arr.size() - 2) / 2 + 1);
         } else mediana = (arr.get(arr.size() / 2 - 1) + arr.get(arr.size() / 2)) / 2;
-        double sum = 0;
-        for (int i = 0; i < arr.size(); i++) {
-        sum += arr.get(i);
-        }
+        final double[] sum = {0};
+        arr.forEach(i-> sum[0] +=i);
         System.out.println("Min: " + min);
         System.out.println("Max: " + max);
         System.out.println("Count: " + arr.size());
         System.out.println("Average: " + average[0]);
         System.out.println("Mediana: " + mediana);
-        System.out.println("Сумма:" + sum);
+        System.out.println("Sum:"+sum[0]);
     }
 }
